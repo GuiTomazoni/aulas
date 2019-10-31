@@ -16,8 +16,10 @@ public class Pizzaria {
 		case "pepperoni":
 			pizza = new PizzaDePepperoni();
 			break;
-		default:
-			break;
+		case "portuguesa":
+			pizza = new PizzaDePortuguesa();
+		case "bacon":
+			pizza = new PizzaDeBacon();
 		}
 		
 		pizza.preparar();
