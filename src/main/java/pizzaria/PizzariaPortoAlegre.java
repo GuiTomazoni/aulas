@@ -9,8 +9,9 @@ import sabores.PizzaDePepperoni;
 import sabores.PizzaDePortuguesa;
 import sabores.PizzaDeQueijo;
 
-public class FactoryDePizzaSimples {
+public class PizzariaPortoAlegre extends Pizzaria {
 
+	@Override
 	public Pizza criarPizza(String sabor) {
 		Pizza pizza = null;
 
@@ -38,4 +39,5 @@ public class FactoryDePizzaSimples {
 		}
 		return pizza;
 	}
+
 }

@@ -1,4 +1,6 @@
-package pizzaria;
+package sabores;
+
+import pizzaria.Pizza;
 
 public class PizzaDeNutella extends Pizza {
 

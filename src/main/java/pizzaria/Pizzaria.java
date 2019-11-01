@@ -1,15 +1,9 @@
 package pizzaria;
 
-public class Pizzaria {
-
-	private FactoryDePizzaSimples factory;
-	
-	public Pizzaria(FactoryDePizzaSimples factory) {
-		this.factory = factory;
-	}
+public abstract class Pizzaria {
 	
 	public Pizza pedirPizza(String sabor) {
-		Pizza pizza = factory.criarPizza(sabor);
+		Pizza pizza = criarPizza(sabor);
 		
 		pizza.preparar();
 		pizza.cozinhar();
@@ -18,6 +12,5 @@ public class Pizzaria {
 		
 		return pizza;
 	}
-		
-	
+	abstract Pizza criarPizza(String sabor);
 }
