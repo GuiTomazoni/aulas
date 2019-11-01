@@ -12,5 +12,5 @@ public abstract class Pizzaria {
 		
 		return pizza;
 	}
-	abstract Pizza criarPizza(String sabor);
+	public abstract Pizza criarPizza(String sabor);
 }

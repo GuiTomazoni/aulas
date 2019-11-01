@@ -1,5 +1,7 @@
-package pizzaria;
+package franquias;
 
+import pizzaria.Pizza;
+import pizzaria.Pizzaria;
 import sabores.PizzaDeBacon;
 import sabores.PizzaDeCalabresa;
 import sabores.PizzaDeChocolate;
