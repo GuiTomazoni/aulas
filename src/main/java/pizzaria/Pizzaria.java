@@ -2,25 +2,14 @@ package pizzaria;
 
 public class Pizzaria {
 
+	private FactoryDePizzaSimples factory;
+	
+	public Pizzaria(FactoryDePizzaSimples factory) {
+		this.factory = factory;
+	}
+	
 	public Pizza pedirPizza(String sabor) {
-		Pizza pizza = null;
-		
-		switch (sabor) {
-		
-		case "queijo":
-			pizza = new PizzaDeQueijo();
-			break;
-		case "calabresa":
-			pizza = new PizzaDeCalabresa();
-			break;
-		case "pepperoni":
-			pizza = new PizzaDePepperoni();
-			break;
-		case "portuguesa":
-			pizza = new PizzaDePortuguesa();
-		case "bacon":
-			pizza = new PizzaDeBacon();
-		}
+		Pizza pizza = factory.criarPizza(sabor);
 		
 		pizza.preparar();
 		pizza.cozinhar();
@@ -29,4 +18,6 @@ public class Pizzaria {
 		
 		return pizza;
 	}
+		
+	
 }
